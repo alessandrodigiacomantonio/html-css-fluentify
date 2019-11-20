@@ -17,6 +17,12 @@
   float: left;
 }
 
+.clearfix::after {
+  content:"";
+  display: table;
+  clear: both;
+}
+
 .green-buttons {
   background-color: #7fb802;
 }
@@ -51,21 +57,10 @@ nav {
   height: 15%;
   padding-top: 20px;
 }
-nav::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 nav a {
   float: left;
   line-height: calc(45px + 45px / 2 - 20px);
   padding: 0 20px;
-}
-
-nav::after {
-  content: url(../img/oldman.png);
-  position: absolute;
-  transform: scale(0.45) translate(0, -374px);
 }
 
 .logo {
@@ -88,10 +83,16 @@ nav::after {
   height: 85%;
   color: white;
 }
+.header-main::after {
+  content: url(../img/oldman.png);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0.5) translateY(60%);
+}
 .header-main > div {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(50%);
 }
 .header-main h1 {
   font-size: 40px;
@@ -102,7 +103,6 @@ nav::after {
   margin-top: 20px;
   padding: 20px;
 }
-
 
 main {
   text-align: center;
@@ -125,4 +125,12 @@ main {
 .main-top h4 {
   font-size: 13px;
   color: #808080;
+}
+
+.main-middle {
+  padding-top: 30px;
+}
+
+.middle {
+  width: 30%;
 }
