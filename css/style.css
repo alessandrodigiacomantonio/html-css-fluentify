@@ -62,6 +62,12 @@ nav a {
   padding: 0 20px;
 }
 
+nav::after {
+  content: url(../img/oldman.png);
+  position: absolute;
+  transform: scale(0.45) translate(0, -374px);
+}
+
 .logo {
   width: 10%;
 }
@@ -96,8 +102,27 @@ nav a {
   margin-top: 20px;
   padding: 20px;
 }
-nav::after {
-  content: url(../img/oldman.png);
+
+
+main {
+  text-align: center;
+}
+
+.main-top {
+  position: relative;
+  height: 90px;
+  background-color: #d3d3d3;
+}
+.main-top > div {
   position: absolute;
-  transform: scale(0.45) translate(0, -374px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-top h3 {
+  font-size: 20px;
+}
+.main-top h4 {
+  font-size: 13px;
+  color: #808080;
 }
