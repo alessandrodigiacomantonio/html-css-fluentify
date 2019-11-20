@@ -33,46 +33,73 @@ a.login {
 
 #container {
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
   height: 450px;
   background-color: #0d325a;
 }
-
-nav {
-  height: 15%;
-  padding-top: 20px;
-}
-
-nav::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-nav a {
-  float: left;
-  line-height: calc(45px + 45px / 2 - 20px);
-  padding: 0 20px;
+header a {
   color: white;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
+nav {
+  height: 15%;
+  padding-top: 20px;
+}
+nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav a {
+  float: left;
+  line-height: calc(45px + 45px / 2 - 20px);
+  padding: 0 20px;
+}
+
 .logo {
   width: 10%;
 }
-
+.logo a {
+  padding: 0 20px 0 0;
+}
 .logo img{
-  vertical-align: middle;
+  transform: translateY(-10%);
 }
 
-.menu {
-  width: 45%;
-}
-
+.menu,
 .links {
   width: 45%;
+}
+
+.header-main {
+  position: relative;
+  height: 85%;
+  color: white;
+}
+.header-main > div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-main h1 {
+  font-size: 40px;
+  width: 70%;
+}
+.header-main a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px;
+}
+.header-main::after {
+  content: url(../img/oldman.png);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
 }
